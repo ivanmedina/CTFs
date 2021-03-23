@@ -1,0 +1,344 @@
+ main = 0x00000000004027A0
+ target= 0x0000000000402540
+ printFlag= 00000000004025F0
+ 
+  ► 0x401cbd    lea    rsi, [rbp - 0x300]
+ pwndbg> x $rbp - 0x300
+   0x7fffffffdbf0:      add    DWORD PTR [rax],eax
+
+loc_401CF9:
+mov     al, [rbp+var_3F1]
+test    al, 1
+jnz     loc_401D0C
+
+loc_402122:
+lea     rdi, [rbp+var_258]
+call    sub_401420
+jmp     $+5
+
+
+loc_402183:
+lea     rdi, [rbp+var_258]
+0x40218a> call    important1  
+lea     rdi, [rbp+var_220]
+call    sub_404180
+lea     rdi, [rbp+var_1D8]
+call    sub_404180
+lea     rdi, [rbp+var_190]
+call    sub_404180
+lea     rdi, [rbp+var_148]
+call    sub_404180
+lea     rdi, [rbp+var_100]
+call    sub_404180
+lea     rdi, [rbp+var_D0]
+call    skip_sub_404040
+lea     rdi, [rbp+var_A8]
+call    skip_sub_404040
+lea     rdi, [rbp+var_80]
+call    skip_sub_404040
+lea     rdi, [rbp+var_48]
+call    skip_sub_404040
+lea     rdi, [rbp+var_20]
+call    skip_sub_404040
+xor     eax, eax
+add     rsp, 440h
+pop     rbp
+retn
+
+important1 proc near
+var_30= qword ptr -30h
+var_28= qword ptr -28h
+var_20= qword ptr -20h
+var_14= dword ptr -14h
+var_10= qword ptr -10h
+var_8= qword ptr -8
+; __unwind { // ___gxx_personality_v0
+push    rbp
+mov     rbp, rsp
+sub     rsp, 30h
+mov     [rbp+var_8], rdi
+mov     rax, [rbp+var_8]
+mov     rdi, [rax]
+mov     rsi, [rax+8]
+mov     [rbp+var_20], rdi
+mov     rdi, rax
+mov     [rbp+var_28], rax
+mov     [rbp+var_30], rsi
+call    important1_1
+
+important1_1 proc near
+var_8= qword ptr -8
+; __unwind {
+push    rbp
+mov     rbp, rsp
+mov     [rbp+var_8], rdi
+mov     rax, [rbp+var_8]
+pop     rbp
+retn
+; } // starts at 4064C0
+important1_1 endp
+
+;   try {
+mov     rdi, [rbp+var_20]
+mov     rsi, [rbp+var_30]
+mov     rdx, rax
+call    importante1_2
+;   } // starts at 40413B
+jmp     $+5
+
+importante1_2 proc near
+var_18= qword ptr -18h
+var_10= qword ptr -10h
+var_8= qword ptr -8
+; __unwind {
+push    rbp
+mov     rbp, rsp
+sub     rsp, 20h
+mov     [rbp+var_8], rdi
+mov     [rbp+var_10], rsi
+mov     [rbp+var_18], rdx
+mov     rdi, [rbp+var_8]
+mov     rsi, [rbp+var_10]
+call    important1_3
+add     rsp, 20h
+pop     rbp
+retn
+; } // starts at 406500
+importante1_2 endp
+
+important1_3 proc near
+var_10= qword ptr -10h
+var_8= qword ptr -8
+; __unwind {
+push    rbp
+mov     rbp, rsp
+sub     rsp, 10h
+mov     [rbp+var_8], rdi
+mov     [rbp+var_10], rsi
+mov     rdi, [rbp+var_8]
+mov     rsi, [rbp+var_10]
+call    importante1_4
+add     rsp, 10h
+pop     rbp
+retn
+; } // starts at 4068F0
+important1_3 endp
+
+
+importante1_4 proc near
+var_10= qword ptr -10h
+var_8= qword ptr -8
+; __unwind {
+push    rbp
+mov     rbp, rsp
+mov     [rbp+var_8], rdi
+mov     [rbp+var_10], rsi
+pop     rbp
+retn
+; } // starts at 406980
+importante1_4 endp
+
+jmp > 
+loc_404150:
+mov     rax, [rbp+var_28]
+mov     rdi, rax
+call    important2
+add     rsp, 30h
+pop     rbp
+retn
+
+important2 proc near
+var_20= qword ptr -20h
+var_14= dword ptr -14h
+var_10= qword ptr -10h
+var_8= qword ptr -8
+; __unwind { // ___gxx_personality_v0
+push    rbp
+mov     rbp, rsp
+sub     rsp, 20h
+mov     [rbp+var_8], rdi
+mov     rax, [rbp+var_8]
+mov     rcx, [rax]
+mov     rdx, [rax+10h]
+sub     rdx, rcx
+sar     rdx, 4
+;   try {
+mov     rdi, rax
+mov     rsi, rcx
+mov     [rbp+var_20], rax
+call    importante2_2
+;   } // starts at 40712E
+jmp     $+5
+
+break *0x406530
+
+importante2_2 proc near
+var_20= qword ptr -20h
+var_18= qword ptr -18h
+var_10= qword ptr -10h
+var_8= qword ptr -8
+; __unwind {
+push    rbp
+mov     rbp, rsp
+sub     rsp, 20h
+mov     [rbp+var_8], rdi
+mov     [rbp+var_10], rsi
+mov     [rbp+var_18], rdx
+mov     rax, [rbp+var_8]
+cmp     [rbp+var_10], 0
+mov     [rbp+var_20], rax
+jz      loc_40656B
+
+   0x406534    sub    rsp, 0x20
+   0x406538    mov    qword ptr [rbp - 8], rdi
+   0x40653c    mov    qword ptr [rbp - 0x10], rsi
+   0x406540    mov    qword ptr [rbp - 0x18], rdx
+   0x406544    mov    rax, qword ptr [rbp - 8]
+ ► 0x406548    cmp    qword ptr [rbp - 0x10], 0
+   0x40654d    mov    qword ptr [rbp - 0x20], rax
+   0x406551    je     0x40656b <0x40656b>
+ 
+   0x406557    mov    rax, qword ptr [rbp - 0x20]
+   0x40655b    mov    rsi, qword ptr [rbp - 0x10]
+   0x40655f    mov    rdx, qword ptr [rbp - 0x18]
+──────────────────────────────────────────────────────────────────────────────────────────[ STACK ]───────────────────────────────────────────────────────────────────────────────────────────
+00:0000│ rsp  0x7fffffffda10 —▸ 0x7fffffffda30 —▸ 0x7fffffffda60 —▸ 0x7fffffffdaa0 —▸ 0x7fffffffdef0 ◂— ...
+01:0008│      0x7fffffffda18 ◂— 0x10
+02:0010│      0x7fffffffda20 —▸ 0x61e3f0 —▸ 0x7fffffffdd60 ◂— 0x0
+03:0018│      0x7fffffffda28 —▸ 0x7fffffffdc98 —▸ 0x61e3f0 —▸ 0x7fffffffdd60 ◂— 0x0
+04:0020│ rbp  0x7fffffffda30 —▸ 0x7fffffffda60 —▸ 0x7fffffffdaa0 —▸ 0x7fffffffdef0 —▸ 0x7fffffffdf10 ◂— ...
+05:0028│      0x7fffffffda38 —▸ 0x40713d ◂— jmp    0x407142
+06:0030│      0x7fffffffda40 —▸ 0x7fffffffdc98 —▸ 0x61e3f0 —▸ 0x7fffffffdd60 ◂— 0x0
+... ↓
+────────────────────────────────────────────────────────────────────────────────────────[ BACKTRACE ]─────────────────────────────────────────────────────────────────────────────────────────
+ ► f 0           406548
+   f 1           40713d
+   f 2           40415c
+   f 3           40218f
+   f 4           4027b4
+   f 5     7ffff7ad9cca __libc_start_main+234
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+pwndbg> x/gx $rbp -0x10
+0x7fffffffda20: 0x000000000061e3f0
+pwndbg> x/gx 0x000000000061e3f0
+0x61e3f0:       0x00007fffffffdd60
+pwndbg> 
+
+mov     rax, [rbp+var_20]
+mov     rsi, [rbp+var_10]
+mov     rdx, [rbp+var_18]
+mov     rdi, rax
+call    importante2_3
+
+
+0x40656b:
+loc_40656B:
+add     rsp, 20h
+pop     rbp
+retn
+; } // starts at 406530
+importante2_2 endp
+
+loc_407142:
+mov     rdi, [rbp+var_20]
+call    sub_407170
+add     rsp, 20h
+pop     rbp
+retn
+
+sub_4071B0 proc near
+
+loc_404150:
+mov     rax, [rbp+var_28]
+mov     rdi, rax
+call    important2
+add     rsp, 30h
+pop     rbp
+0x404161: retn
+
+
+
+loc_402183:
+lea     rdi, [rbp+var_258]
+call    important1
+> lea     rdi, [rbp+var_220]
+call    sub_404180
+lea     rdi, [rbp+var_1D8]
+call    sub_404180
+lea     rdi, [rbp+var_190]
+call    sub_404180
+lea     rdi, [rbp+var_148]
+call    sub_404180
+lea     rdi, [rbp+var_100]
+call    sub_404180
+lea     rdi, [rbp+var_D0]
+call    skip_sub_404040
+lea     rdi, [rbp+var_A8]
+call    skip_sub_404040
+lea     rdi, [rbp+var_80]
+call    skip_sub_404040
+lea     rdi, [rbp+var_48]
+call    skip_sub_404040
+lea     rdi, [rbp+var_20]
+call    skip_sub_404040
+xor     eax, eax
+add     rsp, 440h
+pop     rbp
+retn
+
+broke proc near
+var_30= qword ptr -30h
+var_28= qword ptr -28h
+var_20= qword ptr -20h
+var_18= qword ptr -18h
+var_10= qword ptr -10h
+var_8= qword ptr -8
+; __unwind {
+push    rbp
+mov     rbp, rsp
+sub     rsp, 30h
+mov     [rbp+var_8], rdi
+mov     rax, off_60B130
+mov     rdi, rsi
+mov     [rbp+var_20], rsi
+mov     [rbp+var_28], rax
+call    sub_406E00
+mov     rdi, [rax]
+mov     rax, [rbp+var_28]
+call    rax
+mov     [rbp+var_10], rax
+mov     rax, off_60B130
+mov     rdi, [rbp+var_20]
+mov     [rbp+var_30], rax
+call    sub_406E00
+mov     rdi, [rax+8]
+mov     rax, [rbp+var_30]
+call    rax
+mov     [rbp+var_18], rax
+mov     rax, [rbp+var_18]
+mov     rcx, [rbp+var_10]
+> mov     [rcx], eax < AQUI TRUENA 0x40398c
+eax=0xf7=247
+[rcx]= 0xf6=246 
+mov     rcx, off_60B138
+mov     rdx, [rbp+var_10]
+imul    rdx, [rbp+var_18]
+mov     rdi, rdx
+call    rcx ; skip_sub_403A80
+add     rsp, 30h
+pop     rbp
+retn
+; } // starts at 403930
+broke endp
+
+
+.text:00000000004027B4                 cmp     rax, 1337
+
+
+ #######################
+funcion main: 0x4027b4
+funcion leer flag 0x402655
+0x401ab8    call   rax
+funcion de read = 0x401CC4
+0x61e3a0 chunks-donde se guardan mis datos
+esta es la direccion donde truena\> 0x40398C
