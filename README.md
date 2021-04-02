@@ -1,7 +1,7 @@
 # CTFs :triangular_flag_on_post:		
 Capture the flag challenges, let's hack...
 
-1.  [TokioWestern 2019]("https://github.com/ivanmedina/CTFs/tree/master/TOKYOWESTERN19")
+1.  [TokioWestern 2019](https://github.com/ivanmedina/CTFs/tree/master/TOKYOWESTERN19)
 2.  [RedPWN 2019]("https://github.com/ivanmedina/CTFs/tree/master/REDpwn19")
 3.  [HackDef 2019 - (Quals)]("https://github.com/ivanmedina/CTFs/tree/master/HACKDEF19-QUALS")
 4.  [HackDef 2019 - (Final)]("https://github.com/ivanmedina/CTFs/tree/master/HACKDEF19-FINAL")
