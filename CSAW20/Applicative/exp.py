@@ -33,6 +33,6 @@ input(str(0x60b138))#esto es donde => rcx
 input(str(0x4025F0))#esto es lo que escribo => eax
 input("A"*1000)
 io.interactive()
-//PENDIENTE
+#PENDIENTE
 # =============================================================================
 

@@ -7,7 +7,7 @@ Capture the flag challenges, let's hack...
 4.  [HackDef 2019 - (Final)](https://github.com/ivanmedina/CTFs/tree/master/HACKDEF19-FINAL)
 5.  [CyBrics 2020](https://github.com/ivanmedina/CTFs/tree/master/CyBrics2020)
 6.  [FWorld 2020](https://github.com/ivanmedina/CTFs/tree/master/FWORD20)
-7.  [DamnCTF 2020](https://github.com/ivanmedina/CTFs/tree/master/DAMNCTF20)
+7.  [DamCTF 2020](https://github.com/ivanmedina/CTFs/tree/master/DAMCTF20)
 8.  [Hacktivity 2020](https://github.com/ivanmedina/CTFs/tree/master/HACKTIVITY20)
 9.  [NACTF 2020](https://github.com/ivanmedina/CTFs/tree/master/NACTF20)
 10. [HackDef 2020 (Quals)](https://github.com/ivanmedina/CTFs/tree/master/HACKDEF20-QUALS)

