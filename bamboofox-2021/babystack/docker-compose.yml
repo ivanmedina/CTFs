@@ -5,7 +5,6 @@ services:
     container_name: babystack
     build: ./
     volumes:
-      - ./pwn:/home/pwn/src
       - ./share:/home/babystack
       - ./xinetd:/etc/xinetd.d/babystack:ro
     ports:

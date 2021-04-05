@@ -12,11 +12,11 @@ RUN chmod -R 755 /home/babystack
 
 RUN apt-get install -y gdb gdbserver binutils python3 ruby git tmux ssh python3-pip python2.7 python-pip vim
 RUN gem install one_gadget
-RUN mkdir /home/pwn
-RUN chmod -R 777 /home/pwn
+#RUN mkdir /home/pwn
+#RUN chmod -R 777 /home/pwn
 RUN python3 -m pip install virtualenv
-RUN virtualenv /home/pwn
-RUN /bin/bash -c 'source /home/pwn/bin/activate'
+#RUN virtualenv /home/pwn
+#RUN /bin/bash -c 'source /home/pwn/bin/activate'
 #python3 -m pip install pwntools 
 RUN git clone https://github.com/pwndbg/pwndbg && \
 cd pwndbg && ./setup.sh
