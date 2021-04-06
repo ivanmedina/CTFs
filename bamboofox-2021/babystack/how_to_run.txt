@@ -1,0 +1,1 @@
+docker run -v /home/user/Desktop/ivan_parrot/git_parrot/my-gits/CTFs/bamboofox-2021/babystack/share:/home/babystack --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -it --name babystack babystack:0.0 bash
