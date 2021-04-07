@@ -8,6 +8,6 @@
 
 ### Reversing
 
-:x: [Smali](https://github.com/ivanmedina/CTFs/tree/master/HACKDEF20-FINAL/smali)
+:heavy_check_mark: [Smali](https://github.com/ivanmedina/CTFs/tree/master/HACKDEF20-FINAL/smali)
 
 

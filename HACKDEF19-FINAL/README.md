@@ -2,4 +2,4 @@
 
 ### Pwning
 
-:x: [Clabe](https://github.com/ivanmedina/CTFs/tree/master/HACKDEF19-FINAL/CLABE)
+:heavy_check_mark: [Clabe](https://github.com/ivanmedina/CTFs/tree/master/HACKDEF19-FINAL/CLABE)

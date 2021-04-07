@@ -2,5 +2,5 @@
 
 ### Pwning
 
-:x: [Welcome to pwner](https://github.com/ivanmedina/CTFs/tree/master/FWORD20/welcome-to-pwner)
+:heavy_check_mark: [Welcome to pwner](https://github.com/ivanmedina/CTFs/tree/master/FWORD20/welcome-to-pwner)
 

