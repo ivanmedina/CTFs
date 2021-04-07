@@ -45,6 +45,54 @@ I didnt solve this challange, the vulnerability consists in overwriting RBP for 
 ### Functions
 ![Functions](https://raw.githubusercontent.com/ivanmedina/CTFs/master/bamboofox-2021/babystack/assets/functions.png)
 
-### Read name and token
+### Main
+![Main](https://raw.githubusercontent.com/ivanmedina/CTFs/master/bamboofox-2021/babystack/assets/main.png)
+
+### Read name
 The vulnerability is not here, but something interesting is that you can notice, that from the name you can overwrite the token, or you can just put the token you're asking for, which is deadbeef.
+
+![read_name_token](https://raw.githubusercontent.com/ivanmedina/CTFs/master/bamboofox-2021/babystack/assets/read_name.png)
+
+### Read token
+
+![read_token](https://raw.githubusercontent.com/ivanmedina/CTFs/master/bamboofox-2021/babystack/assets/read_token.png)
+
+### Name and token in the stack
+
+![token_stack](https://raw.githubusercontent.com/ivanmedina/CTFs/master/bamboofox-2021/babystack/assets/name_tkn_enviado.png)
+
+### Read strings
+
+![read_strings](https://github.com/ivanmedina/CTFs/blob/master/bamboofox-2021/babystack/assets/decompiled_read_strs.png)
+ 
+ ### ROUND 1 
+ 
+ This is where most interesting things happen, because if we send information without cutting the line with pwntools sendline, strlen will give me the amount of bytes that it has as a parameter, from here that spits out so many leaks, and the first of them is the canary and a nice stack leak, which will serve us move in the stack...
+ 
+ ![leaking_canary](https://raw.githubusercontent.com/ivanmedina/CTFs/master/bamboofox-2021/babystack/assets/how_leaked_1.png)
+ 
+ ![leaked_canary](https://raw.githubusercontent.com/ivanmedina/CTFs/master/bamboofox-2021/babystack/assets/leaks_1.png)
+ 
+### ROUND 2
+
+![round2](https://raw.githubusercontent.com/ivanmedina/CTFs/master/bamboofox-2021/babystack/assets/round2.png)
+
+![round2stack](https://raw.githubusercontent.com/ivanmedina/CTFs/master/bamboofox-2021/babystack/assets/reallycanarytooverwriteread.png)
+
+![round2overwrite](https://raw.githubusercontent.com/ivanmedina/CTFs/master/bamboofox-2021/babystack/assets/overwriteRBP1.png)
+
+### ROUND 3 (starting get libc leak)
+
+Here the rop used is crafted with the binaries gadgets and some additions and subtractions from the stack leaks, with puts function we can know the libc base and use one_gadget.
+
+![round3](https://raw.githubusercontent.com/ivanmedina/CTFs/master/bamboofox-2021/babystack/assets/leak_libc.png)
+
+### FINAL ROUND
+
+And send the last payload with the master gadget and get shell...
+
+![win](https://raw.githubusercontent.com/ivanmedina/CTFs/master/bamboofox-2021/babystack/assets/win.png)
+
+
+
 
