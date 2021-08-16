@@ -1,6 +1,7 @@
 # CTFs :triangular_flag_on_post:		
 Capture the flag challenges, let's hack...
 
+0. [CTFLearn](https://github.com/ivanmedina/CTFs/tree/master/CTFlearn)
 1.  [RedPWN 2019](https://github.com/ivanmedina/CTFs/tree/master/REDpwn19)
 2.  [HackDef 2019 - (Quals)](https://github.com/ivanmedina/CTFs/tree/master/HACKDEF19-QUALS)
 3.  [HackDef 2019 - (Final)](https://github.com/ivanmedina/CTFs/tree/master/HACKDEF19-FINAL)
@@ -19,4 +20,8 @@ Capture the flag challenges, let's hack...
 16. [SAN DIEGO CTF 2021](https://github.com/ivanmedina/CTFs/tree/master/SDCTF21)
 17. [ZHERO CTF 2021](https://github.com/ivanmedina/CTFs/tree/master/ZHERO21)
 18. [RedPWN CTF 2021](https://github.com/ivanmedina/CTFs/tree/master/REDpwn21)
-19. [CTFLearn](https://github.com/ivanmedina/CTFs/tree/master/CTFlearn)
+19. [UTCTF 2021](https://github.com/ivanmedina/CTFs/tree/master/UTCTF21)
+20. [UIUCTF 2021](https://github.com/ivanmedina/CTFs/tree/master/UIUCTF21)
+21. [HackDef 2021 (Quals)](https://github.com/ivanmedina/CTFs/tree/master/HACKDEF21-QUALS)
+
+Continue ...

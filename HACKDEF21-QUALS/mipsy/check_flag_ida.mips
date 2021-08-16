@@ -1,0 +1,258 @@
+.text:004008F0
+.text:004008F0  # =============== S U B R O U T I N E =======================================
+.text:004008F0
+.text:004008F0  # Attributes: bp-based frame fpd=0x30
+.text:004008F0
+.text:004008F0                 .globl check_flag
+.text:004008F0 check_flag:                              # CODE XREF: main+44↑p
+.text:004008F0
+.text:004008F0 var_20          = -0x20
+.text:004008F0 s               = -0x14
+.text:004008F0 var_C           = -0xC
+.text:004008F0 var_8           = -8
+.text:004008F0 var_7           = -7
+.text:004008F0 var_6           = -6
+.text:004008F0 var_4           = -4
+.text:004008F0 var_s0          =  0
+.text:004008F0 var_s4          =  4
+
+
+hackdef{p_y1_t1_}
+
+
+.text:004008F0
+.text:004008F0                 addiu   $sp, -0x38
+.text:004008F4                 sw      $ra, 0x30+var_s4($sp)
+.text:004008F8                 sw      $fp, 0x30+var_s0($sp)
+.text:004008FC                 move    $fp, $sp
+.text:00400900                 li      $gp, 0x419010             
+.text:00400908                 sw      $gp, 0x30+var_20($sp)
+.text:0040090C                 sw      $a0, 0x30+s($fp)	<<<<<----------------------
+.text:00400910                 la      $v0, __stack_chk_guard
+.text:00400914                 lw      $v0, (__stack_chk_guard - 0x4110B4)($v0)
+.text:00400918                 sw      $v0, 0x30+var_4($fp)
+.text:0040091C                 lw      $a0, 0x30+s($fp)  # s <<<<<----------------------
+.text:00400920                 la      $v0, strlen
+.text:00400924                 move    $t9, $v0
+.text:00400928                 jalr    $t9 ; strlen
+.text:0040092C                 nop				<<<<-----------------------
+.text:00400930                 lw      $gp, 0x30+var_20($fp)
+.text:00400934                 sw      $v0, 0x30+var_C($fp)<<<<--------------------
+.text:00400938                 lw      $v1, 0x30+var_C($fp)
+.text:0040093C                 li      $v0, 0x1C
+.text:00400940                 beq     $v1, $v0, loc_400954				<<<<<<<<<<<<<<<<<<<<--------------------- revisa que la longitud sea 28
+.text:00400944                 nop												||
+.text:00400948                 move    $v0, $zero										||
+.text:0040094C                 b       loc_400B90	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<	||				||
+.text:00400950                 nop								||				||
+.text:00400954  # ------------------------------------------------------------------------------||------------------------------ |
+.text:00400954											||	
+
+
+# iteracion 1
+
+.text:00400954 loc_400954:                              # CODE XREF: check_flag+50↑j		||
+.text:00400954                 lw      $v0, 0x30+s($fp)						|| 
+.text:00400958                 addiu   $v0, 0xC							||
+.text:0040095C                 lb      $v1, 0($v0)						||
+.text:00400960                 li      $v0, 0x5F  # '_'						||
+.text:00400964                 bne     $v1, $v0, loc_400B8C													||
+.text:00400968                 nop								||
+
+# iteracion 2
+
+.text:0040096C                 lw      $v0, 0x30+s($fp)						||
+.text:00400970                 addiu   $v0, 0x10						||
+.text:00400974                 lb      $v1, 0($v0)						||
+.text:00400978                 li      $v0, 0x5F  # '_'						||
+.text:0040097C                 bne     $v1, $v0, loc_400B8C					||
+.text:00400980                 nop
+					
+# iteracion 3
+		
+.text:00400984                 lw      $v0, 0x30+s($fp)						||
+.text:00400988                 addiu   $v0, 0x14						||
+.text:0040098C                 lb      $v1, 0($v0)						||
+.text:00400990                 li      $v0, 0x5F  # '_'						||
+.text:00400994                 bne     $v1, $v0, loc_400B8C					||
+.text:00400998                 nop	
+					
+# iteracion 4
+
+.text:0040099C                 lw      $v0, 0x30+s($fp)						||
+.text:004009A0                 addiu   $v0, 0x18						||
+.text:004009A4                 lb      $v1, 0($v0)						||
+.text:004009A8                 li      $v0, 0x5F  # '_'						||
+.text:004009AC                 bne     $v1, $v0, loc_400B8C					||
+.text:004009B0                 nop
+	
+
+	_____01__ 
+
+	11 10 9 8
+
+	1 1 1 1
+
+# iteracion 5
+							||
+.text:004009B4                 lw      $v0, 0x30+s($fp)
+.text:004009B8                 addiu   $v0, 9
+.text:004009BC                 lb      $v1, 0($v0)
+.text:004009C0                 li      $v0, 0x31  # '1'
+.text:004009C4                 bne     $v1, $v0, loc_400B80
+.text:004009C8                 nop
+
+
+# iteracion 6
+
+.text:004009CC                 lw      $v0, 0x30+s($fp)
+.text:004009D0                 addiu   $v0, 0xD
+.text:004009D4                 lb      $v1, 0($v0)
+.text:004009D8                 li      $v0, 0x31  # '1'
+.text:004009DC                 bne     $v1, $v0, loc_400B80
+.text:004009E0                 nop
+
+
+# iteracion 7
+
+.text:004009E4                 lw      $v0, 0x30+s($fp)
+.text:004009E8                 addiu   $v0, 0xF
+.text:004009EC                 lb      $v1, 0($v0)
+.text:004009F0                 li      $v0, 0x31  # '1'
+.text:004009F4                 bne     $v1, $v0, loc_400B80
+.text:004009F8                 nop
+
+
+# iteracion 8
+
+
+.text:004009FC                 lw      $v0, 0x30+s($fp)
+.text:00400A00                 addiu   $v0, 0x16
+.text:00400A04                 lb      $v1, 0($v0)
+.text:00400A08                 li      $v0, 0x31  # '1'
+.text:00400A0C                 bne     $v1, $v0, loc_400B80
+.text:00400A10                 nop											<<<< ************ ___1111
+
+
+# iteracion 9
+
+
+.text:00400A14                 lw      $v0, 0x30+s($fp)
+.text:00400A18                 addiu   $v0, 8
+.text:00400A1C                 lb      $v0, 0($v0)							<<<<<<------------carga un byte despues de sumarle 8 al input
+.text:00400A20                 beqz    $v0, loc_400B74
+.text:00400A24                 nop
+
+
+# iteracion 10
+
+
+.text:00400A28                 lw      $v0, 0x30+s($fp)
+.text:00400A2C                 addiu   $v0, 0x13
+.text:00400A30                 lb      $v0, 0($v0)
+.text:00400A34                 beqz    $v0, loc_400B74
+.text:00400A38                 nop											<<<<<<------------ ___111100
+
+# iteracion 11
+
+.text:00400A3C                 lw      $v0, 0x30+s($fp)
+.text:00400A40                 addiu   $v0, 0x15
+.text:00400A44                 lb      $v0, 0($v0)					<<<<-------------------  comienza una suma
+.text:00400A48                 move    $v1, $v0
+
+.text:00400A4C                 lw      $v0, 0x30+s($fp)
+.text:00400A50                 addiu   $v0, 0x17
+.text:00400A54                 lb      $v0, 0($v0)
+
+.text:00400A58                 addu    $v0, $v1, $v0
+.text:00400A5C                 addiu   $v0, -0xC8		<<<<-------------------  esa suma le suma eso negativo como unsigned ???
+
+.text:00400A60                 sltiu   $v0, 2						<<<<<---------------- set $v0<2 1:0
+.text:00400A64                 beqz    $v0, loc_400B68
+.text:00400A68                 nop
+
+123123123123
+ 1 123 1 21 1
+1 1   1 
+
+# iteracion 12
+
+.text:00400A6C                 lw      $v0, 0x30+s($fp)
+.text:00400A70                 addiu   $v0, 0xA
+.text:00400A74                 lb      $v1, 0($v0)
+.text:00400A78                 li      $v0, 0x50  # 'P'
+.text:00400A7C                 bne     $v1, $v0, loc_400B5C
+.text:00400A80                 nop
+
+# iteracion 13
+
+.text:00400A84                 lw      $v0, 0x30+s($fp)
+.text:00400A88                 addiu   $v0, 0x11
+.text:00400A8C                 lb      $v1, 0($v0)
+.text:00400A90                 li      $v0, 0x79  # 'y'
+.text:00400A94                 bne     $v1, $v0, loc_400B5C
+.text:00400A98                 nop
+
+# iteracion 14
+
+.text:00400A9C                 lw      $v0, 0x30+s($fp)
+.text:00400AA0                 addiu   $v0, 0x1A
+.text:00400AA4                 lb      $v1, 0($v0)
+.text:00400AA8                 li      $v0, 0x74  # 't'
+.text:00400AAC                 bne     $v1, $v0, loc_400B5C
+.text:00400AB0                 nop
+
+
+# iteracion 15
+
+
+.text:00400AB4                 lw      $v0, 0x30+s($fp)
+.text:00400AB8                 lb      $v0, 0xB($v0)
+.text:00400ABC                 sb      $v0, 0x30+var_8($fp)
+
+.text:00400AC0                 lw      $v0, 0x30+s($fp)
+.text:00400AC4                 lb      $v0, 0xE($v0)
+.text:00400AC8                 sb      $v0, 0x30+var_7($fp)
+
+.text:00400ACC                 lw      $v0, 0x30+s($fp)
+.text:00400AD0                 lb      $v0, 0x12($v0)
+.text:00400AD4                 sb      $v0, 0x30+var_6($fp)
+.text:00400AD8                 addiu   $v0, $fp, 0x30+var_8
+.text:00400ADC                 move    $a0, $v0         # nptr
+.text:00400AE0                 la      $v0, atoi
+.text:00400AE4                 move    $t9, $v0
+.text:00400AE8                 jalr    $t9 ; atoi
+.text:00400AEC                 nop
+
+# iteracion 16
+
+.text:00400AF0                 lw      $gp, 0x30+var_20($fp)
+.text:00400AF4                 move    $v1, $v0
+.text:00400AF8                 li      $v0, 0x1F4
+.text:00400AFC                 bne     $v1, $v0, loc_400B50
+.text:00400B00                 nop
+
+ya comienza a usar $a
+
+# iteracion 17
+
+
+.text:00400B04                 lw      $v0, 0x30+s($fp)
+.text:00400B08                 addiu   $v0, 0x19
+.text:00400B0C                 lb      $v0, 0($v0)
+.text:00400B10                 move    $a0, $v0         # c
+.text:00400B14                 la      $v0, toupper
+.text:00400B18                 move    $t9, $v0
+.text:00400B1C                 jalr    $t9 ; toupper
+.text:00400B20                 nop
+
+# iteracion 18
+
+.text:00400B24                 lw      $gp, 0x30+var_20($fp)
+.text:00400B28                 move    $v1, $v0
+.text:00400B2C                 li      $v0, 0x49  # 'I'
+.text:00400B30                 bne     $v1, $v0, loc_400B44
+.text:00400B34                 nop
+.text:00400B38                 li      $v0, 1
+.text:00400B3C                 b       loc_400B90
+.text:00400B40                 nop

@@ -1,0 +1,4 @@
+Salta, salta y salta entre funciones hasta que el programa te escupa la flag!
+
+Puedes explotarlo remoto en:
+IP:52.33.132.169 - Puerto: 1442
