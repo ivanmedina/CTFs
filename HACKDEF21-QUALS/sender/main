@@ -1,0 +1,40 @@
+
+undefined8 main(void)
+
+{
+  char buffer_256 [256];
+  int opcion_elegida;
+  int numero_input;
+  short uno;
+  int zerox10;
+
+  
+  set_buffers();
+  zerox10 = 0x10;
+  uno = 1;
+  opcion_elegida = -1;
+      while( true ) {
+          while( true ) {
+            opcion_elegida = print_menu();
+            if (opcion_elegida == 4) {
+              return 0;
+            if (opcion_elegida != 3) break;
+            puts("Ingresa el mensaje");
+            my_input(buffer_256,zerox10);
+            if (zerox10 % (int)uno == 0) {
+              puts("Enviando...");
+              puts("Este mensaje no se puede formatear");
+            puts("[TODO] Enviar el mensaje por red.");
+        } while (3 < opcion_elegida);
+        if (opcion_elegida != 1) break;
+        puts(&DAT_004020c8);
+        other_input(&numero_input);
+        if (0x100 < numero_input) {
+          numero_input = 0x100;
+        zerox10 = numero_input;
+    } while (opcion_elegida != 2);
+    puts("Ingresa la cantidad de lineas a usar para el mensaje");
+    other_input(&uno);
+  } while (-1 < uno);
+  puts("No se permiten negativos");
+  exit(0);
