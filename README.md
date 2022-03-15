@@ -29,5 +29,7 @@ Capture the flag challenges, let's hack...
 25. HackDef 2021(Final) - 4th place (No writeups)
 26. [KillerCTF 2021](https://github.com/ivanmedina/CTFs/tree/master/KillerCTF21)
 27. [CSAW 2021(Finals)](https://github.com/ivanmedina/CTFs/tree/master/CSAW21-FINAL)
+28. [DiceCTF 2022](https://github.com/ivanmedina/CTFs/tree/master/DiceCTF22)
+29. [UTCTF 2022](https://github.com/ivanmedina/CTFs/tree/master/UTCTF22)
 
 Continue ...
